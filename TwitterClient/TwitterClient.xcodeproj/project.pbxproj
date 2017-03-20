@@ -12,6 +12,7 @@
 		CD32064B1E803F58002F6E43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3206491E803F58002F6E43 /* Main.storyboard */; };
 		CD32064D1E803F58002F6E43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD32064C1E803F58002F6E43 /* Assets.xcassets */; };
 		CD3206501E803F58002F6E43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD32064E1E803F58002F6E43 /* LaunchScreen.storyboard */; };
+		CD3206581E8052B0002F6E43 /* tweet.json in Resources */ = {isa = PBXBuildFile; fileRef = CD3206571E8052B0002F6E43 /* tweet.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CD32064C1E803F58002F6E43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD32064F1E803F58002F6E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD3206511E803F58002F6E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD3206571E8052B0002F6E43 /* tweet.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tweet.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				CD3206451E803F58002F6E43 /* AppDelegate.swift */,
 				CD3206471E803F58002F6E43 /* ViewController.swift */,
 				CD3206491E803F58002F6E43 /* Main.storyboard */,
+				CD3206571E8052B0002F6E43 /* tweet.json */,
 				CD32064C1E803F58002F6E43 /* Assets.xcassets */,
 				CD32064E1E803F58002F6E43 /* LaunchScreen.storyboard */,
 				CD3206511E803F58002F6E43 /* Info.plist */,
@@ -126,6 +129,7 @@
 				CD3206501E803F58002F6E43 /* LaunchScreen.storyboard in Resources */,
 				CD32064D1E803F58002F6E43 /* Assets.xcassets in Resources */,
 				CD32064B1E803F58002F6E43 /* Main.storyboard in Resources */,
+				CD3206581E8052B0002F6E43 /* tweet.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
