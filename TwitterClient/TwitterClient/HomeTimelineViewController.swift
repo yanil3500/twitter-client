@@ -54,7 +54,7 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Why can't we be friends?:\(indexPath.row)")
+        print("Tweet at:\(indexPath.row)")
     }
 
 

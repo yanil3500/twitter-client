@@ -72,10 +72,10 @@
 		CD3206441E803F58002F6E43 /* TwitterClient */ = {
 			isa = PBXGroup;
 			children = (
+				CD97741A1E80A6D800D0B1CE /* views */,
 				CD0FDF1E1E8077BD0041C2C9 /* controller */,
 				CD3206591E8053C8002F6E43 /* model */,
 				CD3206451E803F58002F6E43 /* AppDelegate.swift */,
-				CD3206491E803F58002F6E43 /* Main.storyboard */,
 				CD3206571E8052B0002F6E43 /* tweet.json */,
 				CD32064C1E803F58002F6E43 /* Assets.xcassets */,
 				CD32064E1E803F58002F6E43 /* LaunchScreen.storyboard */,
@@ -93,6 +93,14 @@
 				CD9774181E80861700D0B1CE /* Tweets.swift */,
 			);
 			name = model;
+			sourceTree = "<group>";
+		};
+		CD97741A1E80A6D800D0B1CE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CD3206491E803F58002F6E43 /* Main.storyboard */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
