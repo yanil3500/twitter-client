@@ -2,10 +2,6 @@
 
 import UIKit
 
-//: Playground - noun: a place where people can play
-
-import UIKit
-
 var str = "Hello, playground"
 
 
@@ -29,7 +25,6 @@ print("Reversed array (Uses external variable): \(reversedArr(numbers))\n")
 //Reverses elements in the array in-place
 func reversedArrInPlace(_ sourceArray: inout [Int]) {
     for index in 0..<sourceArray.count {
-        print("Reversed Array Iteration \(index): \(sourceArray)\n")
 
         sourceArray.insert(sourceArray.popLast()!, at: index)
         
@@ -38,4 +33,27 @@ func reversedArrInPlace(_ sourceArray: inout [Int]) {
 
 print("Array before values are swapped in place: \(numbers)\n")
 reversedArrInPlace(&numbers)
-print("Array after value have been swapped in place: \(numbers)")
+print("Array after values have been swapped in place: \(numbers)\n")
+
+
+//Reverses elements in the array in-place (recursively)
+func reversedArrayRecursive(_ sourceArray: inout [Int], index: Int = 0) -> [Int]{
+    if index < sourceArray.count {
+        
+        print("Array at Iteration \(index): \(sourceArray)")
+        sourceArray.insert(sourceArray.popLast()!, at: index)
+        
+        reversedArrayRecursive(&sourceArray, index: index + 1)
+    }
+    
+    
+    return sourceArray
+}
+
+print("First call to recursive function: Array after values are swapped in place (recursively): \((reversedArrayRecursive(&numbers, index: 0)))\n")
+
+print("Second call to recursiveefunction: Array after values are swapped in place (recursively): \((reversedArrayRecursive(&numbers, index: 0)))\n")
+
+print("Third call to recursiveefunction: Array after values are swapped in place (recursively): \((reversedArrayRecursive(&numbers, index: 0)))")
+
+
