@@ -25,9 +25,26 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="Ozg-qe-yVf">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Timeline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgc-va-khj">
+                                            <rect key="frame" x="92.5" y="10.5" width="135.5" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="Xgc-va-khj" firstAttribute="centerY" secondItem="Ozg-qe-yVf" secondAttribute="centerY" id="I8O-q3-hkd"/>
+                                        <constraint firstItem="Xgc-va-khj" firstAttribute="centerX" secondItem="Ozg-qe-yVf" secondAttribute="centerX" id="VIL-yC-qUI"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" textLabel="dqH-Ch-Bmy" detailTextLabel="Drl-vj-KpR" rowHeight="39" style="IBUITableViewCellStyleSubtitle" id="qEV-hP-XGj">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="39"/>
+                                        <rect key="frame" x="0.0" y="72" width="320" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qEV-hP-XGj" id="6J0-TT-3o8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
