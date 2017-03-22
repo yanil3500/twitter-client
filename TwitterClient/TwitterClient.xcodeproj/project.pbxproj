@@ -18,6 +18,7 @@
 		CD32065D1E8053FD002F6E43 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD32065C1E8053FD002F6E43 /* User.swift */; };
 		CD4038171E819E2A0096185A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4038161E819E2A0096185A /* API.swift */; };
 		CD759D2B1E82F9D300B11D90 /* TweetCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD759D2A1E82F9D300B11D90 /* TweetCellViewController.swift */; };
+		CD759D2D1E8318F600B11D90 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD759D2C1E8318F600B11D90 /* TweetDetailViewController.swift */; };
 		CD9774191E80861700D0B1CE /* Tweets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9774181E80861700D0B1CE /* Tweets.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		CD32065C1E8053FD002F6E43 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CD4038161E819E2A0096185A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CD759D2A1E82F9D300B11D90 /* TweetCellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCellViewController.swift; sourceTree = "<group>"; };
+		CD759D2C1E8318F600B11D90 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		CD9774181E80861700D0B1CE /* Tweets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +54,7 @@
 		CD0FDF1E1E8077BD0041C2C9 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CD759D2C1E8318F600B11D90 /* TweetDetailViewController.swift */,
 				CD759D2A1E82F9D300B11D90 /* TweetCellViewController.swift */,
 				CD0FDF1F1E80780D0041C2C9 /* HomeTimelineViewController.swift */,
 			);
@@ -184,6 +187,7 @@
 			files = (
 				CD759D2B1E82F9D300B11D90 /* TweetCellViewController.swift in Sources */,
 				CD32065D1E8053FD002F6E43 /* User.swift in Sources */,
+				CD759D2D1E8318F600B11D90 /* TweetDetailViewController.swift in Sources */,
 				CD0FDF1D1E806D0B0041C2C9 /* JSONParser.swift in Sources */,
 				CD32065B1E8053EF002F6E43 /* Tweet.swift in Sources */,
 				CD3206461E803F58002F6E43 /* AppDelegate.swift in Sources */,

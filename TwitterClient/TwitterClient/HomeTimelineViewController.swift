@@ -12,6 +12,7 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var tweetArr = [Tweet]() {
         didSet {
             self.tableView.reloadData()
@@ -39,16 +40,39 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
         
 
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        
+        if segue.identifier == "showDetailSegue" {
+            //do some things
+            print("Inside of prepare(for segue): Before getting selected tweet")
+            
+            if let selectedIndex = self.tableView.indexPathForSelectedRow?.row {
+                let selectedTweet = self.tweetArr[selectedIndex]
+                guard let destinationController = segue.destination as? TweetDetailViewController else { return }
+                print("Inside of prepare(for segue): \(selectedTweet)")
+                destinationController.tweet = selectedTweet
+            }
+            
+            
+            
+        }
+    }
 
     func updateTimeLine() {
         print("Checking to see if segmented switch called updateTimeLine")
+        activityIndicator.startAnimating()
         API.shared.getTweets { (tweets) in
             guard let tweets = tweets else { fatalError("Tweets came back nil.") }
 
             //Access OperationQueue.main singleton as add ui elements to the main thread
 //            Reload the tableView on the main thread (aka: main queue) once you are done parsing the JSON data from the request.
             OperationQueue.main.addOperation {
+                self.activityIndicator.stopAnimating()
                 self.tweetArr = tweets
+                
             }
 
         }
@@ -60,31 +84,16 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //Dequeues (removes from the queue)
-        
+        //Dequeues (removes from the queue)x
         let tweetCell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCellViewController
         
         tweetCell.tweetText.text = tweetArr[indexPath.row].text
-
+        
+        
         return tweetCell
+    
     }
-    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TweetCell
-//        
-//        cell.tweetText.text = dataSource[indexPath.row].text
-//        
-//        return cell
-//        
-//    }
-//    
-    
-    
     
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Tweet at:\(indexPath.row)")
-    }
 
 }

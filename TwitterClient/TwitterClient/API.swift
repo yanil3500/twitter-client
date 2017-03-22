@@ -148,7 +148,6 @@ class API {
 
     //Public facing function
     func getTweets(callback: @escaping TweetsCallback) {
-        print("Inside of getTweets: value of userAccount \(self.userAccount).")
         if self.userAccount == nil {
             self.login(callback: { (account) in
                 guard let account = account else {
