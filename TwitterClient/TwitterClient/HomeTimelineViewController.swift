@@ -12,39 +12,52 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
 
     @IBOutlet weak var tableView: UITableView!
     
+    
+    var tweetArr = [Tweet](){
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+   
         
         //Our HomeTimelineViewController 
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        
+        
+        //Gets tweets from twitter api
+        self.updateTimeLine()
+        
+    }
 
-        JSONParser.tweetsFrom(data: JSONParser.sampleJSON) { (success, tweets) in
-            if (success) {
-                guard let tweets = tweets else {
-                    fatalError("Tweets came back nil.")
-                }
-                for tweet in tweets {
-                    print("Tweets: \(tweet.text)")
-                    //Adds list of tweets to shared instance of Tweets class
-                    Tweets.shared.add(tweet: tweet)
-                }
+    func updateTimeLine(){
+        print("Checking to see if segmented switch called updateTimeLine")
+        API.shared.getTweets { (tweets) in
+            guard let tweets = tweets else { fatalError("Tweets came back nil.") }
+            
+            //Access OperationQueue.main singleton as add ui elements to the main thread
+//            Reload the tableView on the main thread (aka: main queue) once you are done parsing the JSON data from the request.
+            OperationQueue.main.addOperation {
+                self.tweetArr = tweets
             }
+            
         }
+        
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Tweets.shared.count()
+        return tweetArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Dequeues (removes from the queue)
         let tweetCell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath)
-        
-        
-        //Makes local, mutable copy
-        var tweetArr = Tweets.shared.allTweets()
+
         
         let tweet = tweetArr[indexPath.row]
         

@@ -13,6 +13,7 @@ class User {
     let userName : String
     let profilePicURL : String
     let location : String
+
     
     init?(json : [String : Any]) {
         if let userName = json["name"] as? String, let profilePicURL = json["profile_image_url"] as? String, let location = json["location"]  as? String {
