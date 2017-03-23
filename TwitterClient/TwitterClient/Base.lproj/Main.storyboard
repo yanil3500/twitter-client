@@ -30,15 +30,15 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vau-63-RFl">
-                                            <rect key="frame" x="40" y="15" width="240" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="Vau-63-RFl" firstAttribute="leading" secondItem="3KP-2g-IgX" secondAttribute="leading" constant="40" id="Cny-oc-MKk"/>
-                                        <constraint firstAttribute="bottom" secondItem="Vau-63-RFl" secondAttribute="bottom" constant="16" id="QcJ-U3-qoi"/>
-                                        <constraint firstItem="Vau-63-RFl" firstAttribute="top" secondItem="3KP-2g-IgX" secondAttribute="top" constant="15" id="dfK-hL-kAL"/>
-                                        <constraint firstAttribute="trailing" secondItem="Vau-63-RFl" secondAttribute="trailing" constant="40" id="sxc-Vr-pLX"/>
+                                        <constraint firstItem="Vau-63-RFl" firstAttribute="leading" secondItem="3KP-2g-IgX" secondAttribute="leading" id="QkY-iP-JnC"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vau-63-RFl" secondAttribute="trailing" id="kKH-cg-L8S"/>
+                                        <constraint firstItem="Vau-63-RFl" firstAttribute="top" secondItem="3KP-2g-IgX" secondAttribute="top" id="v1h-QH-rev"/>
+                                        <constraint firstAttribute="bottom" secondItem="Vau-63-RFl" secondAttribute="bottom" id="vLy-pb-3yJ"/>
                                     </constraints>
                                 </view>
                                 <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="LnV-wu-Mle">
@@ -52,25 +52,8 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qEV-hP-XGj" id="6J0-TT-3o8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92I-Un-Zs8">
-                                                    <rect key="frame" x="8" y="8" width="304" height="31.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="92I-Un-Zs8" firstAttribute="top" secondItem="6J0-TT-3o8" secondAttribute="top" constant="8" id="DXi-Fe-HGC"/>
-                                                <constraint firstAttribute="bottom" secondItem="92I-Un-Zs8" secondAttribute="bottom" constant="8" id="ihf-Iw-qzb"/>
-                                                <constraint firstAttribute="trailing" secondItem="92I-Un-Zs8" secondAttribute="trailing" constant="8" id="nAU-m1-SyD"/>
-                                                <constraint firstItem="92I-Un-Zs8" firstAttribute="leading" secondItem="6J0-TT-3o8" secondAttribute="leading" constant="8" id="yAB-29-YOF"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="tweetText" destination="92I-Un-Zs8" id="DaD-vE-UJP"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -93,6 +76,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="LnV-wu-Mle" id="LYg-W7-l1X"/>
                         <outlet property="tableView" destination="PIW-SF-gUx" id="D8e-gp-HBY"/>
+                        <outlet property="timeLineImage" destination="Vau-63-RFl" id="wk2-Y3-j8n"/>
                         <segue destination="EwQ-42-c4d" kind="show" identifier="TweetDetailViewController" id="z3w-tY-Mxn"/>
                     </connections>
                 </viewController>

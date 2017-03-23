@@ -12,6 +12,7 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var timeLineImage: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var tweetArr = [Tweet]() {
         didSet {
