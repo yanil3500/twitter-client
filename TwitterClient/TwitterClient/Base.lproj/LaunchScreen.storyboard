@@ -6,46 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter_Logo_White_On_Image" translatesAutoresizingMaskIntoConstraints="NO" id="sXc-IN-nFD">
-                                <rect key="frame" x="94" y="218" width="133" height="133"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="HPX-ie-MMV"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="95" id="ata-ue-95s"/>
-                                    <constraint firstAttribute="width" constant="133" id="hiQ-Rh-2JA"/>
-                                    <constraint firstAttribute="height" constant="133" id="mKZ-Df-q0t"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="sXc-IN-nFD" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="94" id="3kn-Lh-xmq"/>
-                            <constraint firstAttribute="trailing" secondItem="sXc-IN-nFD" secondAttribute="trailing" constant="93" id="vLG-xS-IbU"/>
-                            <constraint firstItem="sXc-IN-nFD" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="198" id="zfW-rj-Dhq"/>
-                        </constraints>
-                    </view>
-                </viewController>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Twitter_Logo_White_On_Image" width="133" height="133"/>
-    </resources>
 </document>

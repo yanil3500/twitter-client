@@ -13,6 +13,7 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var timeLineImage: UIImageView!
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var tweetArr = [Tweet]() {
         didSet {
@@ -44,6 +45,9 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
         
         //Gets tweets from twitter api
         self.updateTimeLine()
+        
+        //Set image on timeline
+        self.timeLineImage.image = #imageLiteral(resourceName: "Twitter_Logo_White_On_Image")
 
     }
 
@@ -105,7 +109,7 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //Dequeues (removes from the queue)x
+        //Dequeues (removes from the queue)
         let tweetCell = tableView.dequeueReusableCell(withIdentifier: TweetNibCell.identifier, for: indexPath) as! TweetNibCell
         
         let tweet = self.tweetArr[indexPath.row]
