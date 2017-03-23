@@ -18,6 +18,8 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
             self.tableView.reloadData()
         }
     }
+    
+    var profile : User?
 
     override func viewDidLoad() {
 
@@ -55,10 +57,16 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
                 print("Inside of prepare(for segue): \(selectedTweet)")
                 destinationController.tweet = selectedTweet
             }
-            
-            
-            
         }
+        
+        if segue.identifier == "showProfileSegue" {
+            print("Inside of prepare(for segue) in ProfileViewController")
+            
+            guard let destinationController = segue.destination as? ProfileViewController else { return }
+            
+            destinationController.userProfile = self.profile
+        }
+        
     }
 
     func updateTimeLine() {
@@ -69,7 +77,18 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
 
             //Access OperationQueue.main singleton as add ui elements to the main thread
 //            Reload the tableView on the main thread (aka: main queue) once you are done parsing the JSON data from the request.
+            
+            
+            //Gets account information from Twitter accounts on the device
+            API.shared.getOAuthUser(callback: { (aUser) in
+                guard let userProfile = aUser else { fatalError("User profile came back nil.")}
+                
+                OperationQueue.main.addOperation {
+                    self.profile = userProfile
+                }
+            })
             OperationQueue.main.addOperation {
+                
                 self.activityIndicator.stopAnimating()
                 self.tweetArr = tweets
                 
