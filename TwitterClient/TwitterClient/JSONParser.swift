@@ -10,7 +10,7 @@ import Foundation
 
 typealias JSONParserCallback = (Bool, [Tweet]?) -> Void
 
-typealias JSONParserCallbackForUsers = (Bool, User?) ->Void
+typealias JSONParserCallbackForUsers = (Bool, User?) -> Void
 
 class JSONParser {
 
