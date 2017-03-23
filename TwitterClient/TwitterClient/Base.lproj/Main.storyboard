@@ -187,16 +187,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25M-3F-S4f">
-                                <rect key="frame" x="16" y="180" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="25M-3F-S4f" firstAttribute="top" secondItem="Lv0-8n-z22" secondAttribute="bottom" constant="8" symbolic="YES" id="4ll-7h-sg5"/>
                             <constraint firstItem="067-8E-pje" firstAttribute="top" secondItem="LEQ-IV-hN5" secondAttribute="bottom" constant="8" symbolic="YES" id="8Mk-4u-wRl"/>
                             <constraint firstItem="Lv0-8n-z22" firstAttribute="top" secondItem="vko-eg-Clm" secondAttribute="top" constant="151" id="EB6-EB-pJ6"/>
                             <constraint firstAttribute="trailing" secondItem="067-8E-pje" secondAttribute="trailing" constant="8" id="FVc-6v-nuE"/>
@@ -206,13 +199,17 @@
                             <constraint firstAttribute="trailing" secondItem="LEQ-IV-hN5" secondAttribute="trailing" constant="8" id="VAU-Z6-lJZ"/>
                             <constraint firstItem="LEQ-IV-hN5" firstAttribute="leading" secondItem="vko-eg-Clm" secondAttribute="leading" constant="8" id="WXU-v9-gL1"/>
                             <constraint firstItem="Lv0-8n-z22" firstAttribute="leading" secondItem="vko-eg-Clm" secondAttribute="leading" constant="8" id="Z11-pL-9DZ"/>
-                            <constraint firstAttribute="trailing" secondItem="25M-3F-S4f" secondAttribute="trailing" constant="8" id="aQ9-fa-Jb3"/>
                             <constraint firstItem="Lv0-8n-z22" firstAttribute="top" secondItem="V0D-nC-nxN" secondAttribute="bottom" constant="8" symbolic="YES" id="asz-Ie-kcA"/>
                             <constraint firstAttribute="trailing" secondItem="Lv0-8n-z22" secondAttribute="trailing" constant="8" id="bLF-pi-wz9"/>
-                            <constraint firstItem="25M-3F-S4f" firstAttribute="leading" secondItem="vko-eg-Clm" secondAttribute="leading" constant="8" id="qdW-le-7lx"/>
                             <constraint firstItem="067-8E-pje" firstAttribute="leading" secondItem="vko-eg-Clm" secondAttribute="leading" constant="8" id="wed-Sa-mFo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileDescription" destination="Lv0-8n-z22" id="Poz-SB-thf"/>
+                        <outlet property="screenName" destination="V0D-nC-nxN" id="6YP-mD-F1a"/>
+                        <outlet property="twitterUserName" destination="LEQ-IV-hN5" id="bJa-zx-ZeD"/>
+                        <outlet property="userLocation" destination="067-8E-pje" id="cwN-xd-mT9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TK1-Mi-dBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
