@@ -23,6 +23,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Twitter_Logo_White_On_Image" translatesAutoresizingMaskIntoConstraints="NO" id="sXc-IN-nFD">
                                 <rect key="frame" x="103" y="186" width="133" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="AYF-Re-aZK"/>
+                                    <constraint firstAttribute="height" constant="133" id="D9N-0B-h51"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.19215686274509802" green="0.56862745098039214" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>

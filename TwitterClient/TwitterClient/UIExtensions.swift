@@ -20,16 +20,17 @@ extension UIImage {
             //Optional try, so that if Data(contentsOf:) fails, nil gets assigned into data
             if let data = try? Data(contentsOf: url) {
                 
-                let image = UIImage(data: data)
-                
+                guard let image = UIImage(data: data) else { fatalError("Image not found")}
+                print("Inside of UIExtensions: \(image)")
                 OperationQueue.main.addOperation {
                     callback(image)
                 }
+            } else {
+                OperationQueue.main.addOperation {
+                    callback(nil)
+                }
             }
-            
-            OperationQueue.main.addOperation {
-                callback(nil)
-            }
+           
         }
         
     }
@@ -37,6 +38,7 @@ extension UIImage {
 
 
 //Gives global identifier to any class that conforms to UIResponder (all views conform to the UI responder)
+//Useful in situations in seugues identifiers are need
 extension UIResponder {
     static var identifier : String {
         return String(describing: self)

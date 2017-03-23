@@ -23,6 +23,8 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="95" id="7qR-9U-Az8"/>
                             <constraint firstAttribute="height" constant="95" id="Hbc-Kl-ud3"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="Jkz-m9-Ipt"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="lWH-tE-RYV"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smk-9P-a1w">
@@ -38,6 +40,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.19215686274509802" green="0.56862745098039214" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="smk-9P-a1w" firstAttribute="leading" secondItem="F2H-FU-FNg" secondAttribute="trailing" constant="8" id="7uN-bQ-sOJ"/>
                     <constraint firstAttribute="bottom" secondItem="7WK-vw-Oj3" secondAttribute="bottom" constant="37.5" id="BoV-a9-tTZ"/>
