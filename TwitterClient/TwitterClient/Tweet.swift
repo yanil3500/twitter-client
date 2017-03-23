@@ -12,7 +12,7 @@ class Tweet {
 
     let text: String
     let id: String
-    let retweeted_count : Int
+    let retweeted_count: Int
     var user: User?
 
     //Sets faillable initializer (denoted by ? next to init keyword)

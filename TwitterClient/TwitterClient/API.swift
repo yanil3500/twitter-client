@@ -166,8 +166,8 @@ class API {
             })
         }
     }
-    
-    func getUser(callback: @escaping UserCallback){
+
+    func getUser(callback: @escaping UserCallback) {
         self.getOAuthUser { (aUser) in
             guard let userProfile = aUser else { fatalError("Could not access user profile") }
             callback(userProfile)
