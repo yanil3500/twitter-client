@@ -10,5 +10,8 @@ import UIKit
 
 class TweetCellViewController: UITableViewCell {
 
+    
+    @IBOutlet weak var authorName: UILabel!
+    
     @IBOutlet weak var tweetText: UILabel!
 }

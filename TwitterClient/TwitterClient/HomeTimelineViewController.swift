@@ -99,7 +99,8 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Dequeues (removes from the queue)x
         let tweetCell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCellViewController
-
+        
+        tweetCell.authorName.text = tweetArr[indexPath.row].user?.userName
         tweetCell.tweetText.text = tweetArr[indexPath.row].text
 
         return tweetCell

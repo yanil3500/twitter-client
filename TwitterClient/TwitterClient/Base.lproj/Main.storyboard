@@ -34,11 +34,17 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="39"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qEV-hP-XGj" id="6J0-TT-3o8">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="38.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92I-Un-Zs8">
-                                                    <rect key="frame" x="8" y="8" width="304" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92I-Un-Zs8">
+                                                    <rect key="frame" x="3" y="16" width="304" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNo-2Z-XdT">
+                                                    <rect key="frame" x="3" y="0.0" width="66" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,12 +53,16 @@
                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="92I-Un-Zs8" firstAttribute="top" secondItem="6J0-TT-3o8" secondAttribute="top" constant="8" id="DXi-Fe-HGC"/>
+                                                <constraint firstItem="tNo-2Z-XdT" firstAttribute="top" secondItem="6J0-TT-3o8" secondAttribute="top" id="d1T-4N-6El"/>
+                                                <constraint firstItem="tNo-2Z-XdT" firstAttribute="leading" secondItem="6J0-TT-3o8" secondAttribute="leading" constant="3" id="eZm-Wb-RmG"/>
                                                 <constraint firstAttribute="bottom" secondItem="92I-Un-Zs8" secondAttribute="bottom" constant="8" id="ihf-Iw-qzb"/>
                                                 <constraint firstAttribute="trailing" secondItem="92I-Un-Zs8" secondAttribute="trailing" constant="8" id="nAU-m1-SyD"/>
+                                                <constraint firstAttribute="trailing" secondItem="tNo-2Z-XdT" secondAttribute="trailing" constant="13" id="t6X-Bx-OfW"/>
                                                 <constraint firstItem="92I-Un-Zs8" firstAttribute="leading" secondItem="6J0-TT-3o8" secondAttribute="leading" constant="8" id="yAB-29-YOF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="authorName" destination="tNo-2Z-XdT" id="GVS-BY-VFD"/>
                                             <outlet property="tweetText" destination="92I-Un-Zs8" id="DaD-vE-UJP"/>
                                             <segue destination="EwQ-42-c4d" kind="show" identifier="showDetailSegue" id="Ldp-Wi-18f"/>
                                         </connections>
