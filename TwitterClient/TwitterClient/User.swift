@@ -17,6 +17,7 @@ class User {
     let profileDescription: String
 
     init?(json: [String : Any]) {
+        
         if let userName = json["name"] as? String, let profilePicURL = json["profile_image_url"] as? String, let location = json["location"]  as? String, let screen_name = json["screen_name"] as? String, let descriptor = json["description"] as? String {
             self.userName = userName
             self.profilePicURL = profilePicURL

@@ -43,7 +43,6 @@ class JSONParser {
         do {
             if let userJSON = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] {
                 let aUser = User(json: userJSON)
-                print("Inside of JSONParser.usersFrom: \(aUser)")
                 callback(true, aUser)
             }
         } catch {

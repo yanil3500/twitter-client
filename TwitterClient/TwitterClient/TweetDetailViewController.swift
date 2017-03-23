@@ -32,6 +32,7 @@ class TweetDetailViewController: UIViewController {
             numberOfTweets.isHidden = true
 
         }
+        
 
     }
 }
