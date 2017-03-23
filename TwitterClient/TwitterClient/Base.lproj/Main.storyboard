@@ -70,7 +70,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="tweetText" destination="92I-Un-Zs8" id="DaD-vE-UJP"/>
-                                            <segue destination="EwQ-42-c4d" kind="show" identifier="showDetailSegue" id="Ldp-Wi-18f"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -94,6 +93,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="LnV-wu-Mle" id="LYg-W7-l1X"/>
                         <outlet property="tableView" destination="PIW-SF-gUx" id="D8e-gp-HBY"/>
+                        <segue destination="EwQ-42-c4d" kind="show" identifier="TweetDetailViewController" id="z3w-tY-Mxn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
