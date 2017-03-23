@@ -8,41 +8,40 @@
 
 import Foundation
 
-typealias JSONParserCallback = (Bool, [Tweet]?) -> ()
+typealias JSONParserCallback = (Bool, [Tweet]?) -> Void
 
-typealias JSONParserCallbackForUsers = (Bool, User?) ->()
+typealias JSONParserCallbackForUsers = (Bool, User?) ->Void
 
 class JSONParser {
-    
-    
-    class func tweetsFrom(data: Data, callback: JSONParserCallback){
-        
+
+    class func tweetsFrom(data: Data, callback: JSONParserCallback) {
+
         do {
             if let rootObject = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [[String : Any]] {
                 var tweets = [Tweet]()
-                
+
                 for tweetDictionary in rootObject {
                     if let tweet = Tweet(json: tweetDictionary) {
                         tweets.append(tweet)
                     }
-                    
+
                 }
-                
+
                 callback(true, tweets)
             }
         } catch {
-            
+
             print("Error Serializing JSON")
             callback(false, nil)
         }
-        
+
     }
-    
+
 //    Migrate the JSON parsing code from getOAuthUser to a type method on the JSONParser class
 //    Make sure to properly handle any force try! code in our API class from lecture, using the do, try, catch format.
-    class func usersFrom(data: Data, callback: JSONParserCallbackForUsers){
+    class func usersFrom(data: Data, callback: JSONParserCallbackForUsers) {
         do {
-            if let userJSON = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any]{
+            if let userJSON = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String : Any] {
                 let aUser = User(json: userJSON)
                 print("Inside of JSONParser.usersFrom: \(aUser)")
                 callback(true, aUser)
