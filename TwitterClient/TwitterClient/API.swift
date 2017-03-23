@@ -57,7 +57,7 @@ class API {
     }
 
     //Implements the SLRequest from Social type
-     func getOAuthUser(callback: @escaping UserCallback) {
+     private func getOAuthUser(callback: @escaping UserCallback) {
         //Authenticates credentials with Twitter
         let url = URL(string: "https://api.twitter.com/1.1/account/verify_credentials.json")
 
@@ -164,6 +164,13 @@ class API {
             self.updateTimeLine(callback: { (tweets) in
                 callback(tweets)
             })
+        }
+    }
+    
+    func getUser(callback: @escaping UserCallback){
+        self.getOAuthUser { (aUser) in
+            guard let userProfile = aUser else { fatalError("Could not access user profile") }
+            callback(userProfile)
         }
     }
 

@@ -78,15 +78,15 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
             //Access OperationQueue.main singleton as add ui elements to the main thread
 //            Reload the tableView on the main thread (aka: main queue) once you are done parsing the JSON data from the request.
             
-            
-            //Gets account information from Twitter accounts on the device
-            API.shared.getOAuthUser(callback: { (aUser) in
-                guard let userProfile = aUser else { fatalError("User profile came back nil.")}
+
+            API.shared.getUser(callback: { (aUser) in
+                guard let userProfile = aUser else { fatalError("Cannot access profile") }
                 
                 OperationQueue.main.addOperation {
                     self.profile = userProfile
                 }
             })
+            
             OperationQueue.main.addOperation {
                 
                 self.activityIndicator.stopAnimating()
