@@ -36,6 +36,17 @@ class TweetDetailViewController: UIViewController, UITableViewDelegate, UITableV
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        print("Inside of prepare segue function in TweetDetailViewController: \(segue.identifier)")
+        print("Inside of prepare segue function in TweetDetailViewController: \(UserTimelineViewController.identifier)")
+        if segue.identifier == UserTimelineViewController.identifier {
+            print("Inside of prepare (In UserTimelineViewController): \(UserTimelineViewController.identifier)")
+            guard let destinationController = segue.destination as? UserTimelineViewController else { fatalError("Could not load usertimeline") }
+            destinationController.userProfile = self.tweet.user
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -44,10 +55,9 @@ class TweetDetailViewController: UIViewController, UITableViewDelegate, UITableV
         //Dequeues (removes from the queue)
         let tweetCell = tableView.dequeueReusableCell(withIdentifier: TweetNibCell.identifier, for: indexPath) as! TweetNibCell
         
-        let tweet = self.tweet
         
         //Sends tweet information to our TweetNibCell class
-        tweetCell.tweet = tweet
+        tweetCell.tweet = self.tweet
         
         return tweetCell
         

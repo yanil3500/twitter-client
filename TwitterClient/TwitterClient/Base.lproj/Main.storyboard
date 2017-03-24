@@ -115,7 +115,11 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="User Details" id="Pvz-A3-o1c">
-                        <barButtonItem key="rightBarButtonItem" title="User Timeline" id="264-C6-sLX"/>
+                        <barButtonItem key="rightBarButtonItem" title="User Timeline" id="264-C6-sLX">
+                            <connections>
+                                <segue destination="ILO-6S-jcV" kind="show" identifier="UserTimelineViewController" id="wzk-58-flW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tweetDetailViewTable" destination="nnm-Cc-k5i" id="uoa-vW-7Ty"/>
@@ -124,6 +128,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wju-71-S8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2006.25" y="103.75"/>
+        </scene>
+        <!--User Timeline View Controller-->
+        <scene sceneID="Wxv-a4-xKE">
+            <objects>
+                <viewController id="ILO-6S-jcV" customClass="UserTimelineViewController" customModule="TwitterClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mvj-ff-dJ7"/>
+                        <viewControllerLayoutGuide type="bottom" id="2qO-S8-3Zp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hqa-Gc-rHb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oeN-ZJ-Nh4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2qO-S8-3Zp" firstAttribute="top" secondItem="oeN-ZJ-Nh4" secondAttribute="bottom" id="P1B-PY-sLl"/>
+                            <constraint firstItem="oeN-ZJ-Nh4" firstAttribute="leading" secondItem="hqa-Gc-rHb" secondAttribute="leading" id="X5P-6u-bR1"/>
+                            <constraint firstAttribute="trailing" secondItem="oeN-ZJ-Nh4" secondAttribute="trailing" id="idk-rO-k7E"/>
+                            <constraint firstItem="oeN-ZJ-Nh4" firstAttribute="top" secondItem="mvj-ff-dJ7" secondAttribute="bottom" id="xIY-Tj-kxM"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="userTimeLineTableView" destination="oeN-ZJ-Nh4" id="Wkr-kz-ygN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcD-qP-gwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2870.625" y="130"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="IHq-4E-RRT">

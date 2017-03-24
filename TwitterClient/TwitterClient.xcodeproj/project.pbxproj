@@ -22,6 +22,7 @@
 		CD4038171E819E2A0096185A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4038161E819E2A0096185A /* API.swift */; };
 		CD759D2D1E8318F600B11D90 /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD759D2C1E8318F600B11D90 /* TweetDetailViewController.swift */; };
 		CD759D2F1E834BEB00B11D90 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD759D2E1E834BEB00B11D90 /* ProfileViewController.swift */; };
+		CDC636011E84B63300F35A10 /* UserTimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC636001E84B63300F35A10 /* UserTimelineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		CD4038161E819E2A0096185A /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		CD759D2C1E8318F600B11D90 /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		CD759D2E1E834BEB00B11D90 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CDC636001E84B63300F35A10 /* UserTimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTimelineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,10 @@
 		CD0FDF1E1E8077BD0041C2C9 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				CDC636001E84B63300F35A10 /* UserTimelineViewController.swift */,
 				CD759D2C1E8318F600B11D90 /* TweetDetailViewController.swift */,
-				CD759D2E1E834BEB00B11D90 /* ProfileViewController.swift */,
 				CD0FDF1F1E80780D0041C2C9 /* HomeTimelineViewController.swift */,
+				CD759D2E1E834BEB00B11D90 /* ProfileViewController.swift */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				CD32065B1E8053EF002F6E43 /* Tweet.swift in Sources */,
 				CD1764791E8467D100F1442D /* TweetNibCell.swift in Sources */,
 				CD3206461E803F58002F6E43 /* AppDelegate.swift in Sources */,
+				CDC636011E84B63300F35A10 /* UserTimelineViewController.swift in Sources */,
 				CD0FDF201E80780D0041C2C9 /* HomeTimelineViewController.swift in Sources */,
 				CD4038171E819E2A0096185A /* API.swift in Sources */,
 			);

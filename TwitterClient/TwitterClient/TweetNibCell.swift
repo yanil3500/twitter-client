@@ -22,7 +22,6 @@ class TweetNibCell: UITableViewCell {
             self.usernameLabel.text = tweet.user?.userName ?? "Unknown User"
             
             guard let user = tweet.user else { fatalError("Unknown user")}
-            print("Inside of TweetNibCell: \(user.profilePicURL)")
             UIImage.fetchImageWith(user.profilePicURL) { (image) in
                 self.userImageView.image = image
             }

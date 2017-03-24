@@ -21,7 +21,6 @@ extension UIImage {
             if let data = try? Data(contentsOf: url) {
                 
                 guard let image = UIImage(data: data) else { fatalError("Image not found")}
-                print("Inside of UIExtensions: \(image)")
                 OperationQueue.main.addOperation {
                     callback(image)
                 }
