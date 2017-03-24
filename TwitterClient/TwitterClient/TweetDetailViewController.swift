@@ -27,6 +27,8 @@ class TweetDetailViewController: UIViewController, UITableViewDelegate, UITableV
          let tweetNib = UINib(nibName: "TweetNibCell", bundle: nil)
         self.tweetDetailViewTable.register(tweetNib, forCellReuseIdentifier: TweetNibCell.identifier)
         
+        self.tweetDetailViewTable.estimatedRowHeight = 50
+        self.tweetDetailViewTable.rowHeight = UITableViewAutomaticDimension
         
         print("Inside of TweetDetailViewController: \(tweet.text)\nNumber of retweets: \(tweet.retweeted_count)\nScreenname:\(tweet.user?.screenName)")
        

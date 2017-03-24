@@ -97,22 +97,23 @@
                         <viewControllerLayoutGuide type="bottom" id="Vg2-A4-7HU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yy3-wf-0dW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nnm-Cc-k5i">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Vg2-A4-7HU" firstAttribute="top" secondItem="nnm-Cc-k5i" secondAttribute="bottom" id="0y9-Wb-rTT"/>
-                            <constraint firstAttribute="trailing" secondItem="nnm-Cc-k5i" secondAttribute="trailing" id="43Y-6c-ceU"/>
-                            <constraint firstItem="nnm-Cc-k5i" firstAttribute="leading" secondItem="Yy3-wf-0dW" secondAttribute="leading" id="clK-nf-aSU"/>
-                            <constraint firstItem="nnm-Cc-k5i" firstAttribute="top" secondItem="45q-DL-aJA" secondAttribute="bottom" id="jZh-tl-QpU"/>
+                            <constraint firstItem="Vg2-A4-7HU" firstAttribute="top" secondItem="nnm-Cc-k5i" secondAttribute="bottom" id="GjS-yN-g4z"/>
+                            <constraint firstItem="nnm-Cc-k5i" firstAttribute="leading" secondItem="Yy3-wf-0dW" secondAttribute="leading" id="Nbu-04-Cvg"/>
+                            <constraint firstItem="nnm-Cc-k5i" firstAttribute="top" secondItem="45q-DL-aJA" secondAttribute="bottom" id="hkK-pK-d4b"/>
+                            <constraint firstAttribute="trailing" secondItem="nnm-Cc-k5i" secondAttribute="trailing" id="keh-sL-QEZ"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="tweetDetailViewTable" destination="nnm-Cc-k5i" id="uoa-vW-7Ty"/>
                     </connections>
