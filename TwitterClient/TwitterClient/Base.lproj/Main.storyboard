@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="1136.25" y="131.25"/>
         </scene>
-        <!--Tweet Detail View Controller-->
+        <!--User Details-->
         <scene sceneID="Hgj-WZ-jzP">
             <objects>
                 <viewController id="EwQ-42-c4d" customClass="TweetDetailViewController" customModule="TwitterClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -114,6 +114,9 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="User Details" id="Pvz-A3-o1c">
+                        <barButtonItem key="rightBarButtonItem" title="User Timeline" id="264-C6-sLX"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tweetDetailViewTable" destination="nnm-Cc-k5i" id="uoa-vW-7Ty"/>
                     </connections>
