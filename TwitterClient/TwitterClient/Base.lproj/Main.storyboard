@@ -46,20 +46,9 @@
                                     </constraints>
                                 </view>
                                 <activityIndicatorView key="tableFooterView" hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="LnV-wu-Mle">
-                                    <rect key="frame" x="0.0" y="235" width="320" height="20"/>
+                                    <rect key="frame" x="0.0" y="159" width="320" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tweetCell" rowHeight="48" id="qEV-hP-XGj" customClass="TweetCellViewController" customModule="TwitterClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="187" width="320" height="48"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qEV-hP-XGj" id="6J0-TT-3o8">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -144,6 +133,24 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oeN-ZJ-Nh4">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="rdG-Ik-C0j">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tj0-PJ-CEO">
+                                            <rect key="frame" x="84" y="17" width="137" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="137" id="QaR-9n-4XJ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="tj0-PJ-CEO" firstAttribute="leading" secondItem="rdG-Ik-C0j" secondAttribute="leading" constant="84" id="GL4-E0-UBl"/>
+                                        <constraint firstItem="tj0-PJ-CEO" firstAttribute="top" secondItem="rdG-Ik-C0j" secondAttribute="top" constant="17" id="Nqh-Zb-3bQ"/>
+                                        <constraint firstItem="tj0-PJ-CEO" firstAttribute="centerY" secondItem="rdG-Ik-C0j" secondAttribute="centerY" id="xP3-qc-AwK"/>
+                                    </constraints>
+                                </view>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -156,6 +163,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
+                        <outlet property="userTimeLineImage" destination="tj0-PJ-CEO" id="6mL-4I-pXR"/>
                         <outlet property="userTimeLineTableView" destination="oeN-ZJ-Nh4" id="Wkr-kz-ygN"/>
                     </connections>
                 </viewController>
