@@ -104,7 +104,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="User Details" id="Pvz-A3-o1c">
-                        <barButtonItem key="rightBarButtonItem" title="User Timeline" id="264-C6-sLX">
+                        <barButtonItem key="rightBarButtonItem" title="View Feed" id="264-C6-sLX">
                             <connections>
                                 <segue destination="ILO-6S-jcV" kind="show" identifier="UserTimelineViewController" id="wzk-58-flW"/>
                             </connections>
