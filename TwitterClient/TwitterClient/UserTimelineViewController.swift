@@ -15,13 +15,23 @@ class UserTimelineViewController: UIViewController, UITableViewDelegate, UITable
     
     var userProfile : User!
     
-    var userTweet = [Tweet](){
+    var userTweets = [Tweet](){
         didSet {
             self.userTimeLineTableView.reloadData()
         }
     }
     
-
+    func updateTimeLine(){
+        API.shared.getTweetsFor(self.userProfile.screenName) { (tweets) in
+            guard let tweets = tweets else { fatalError("Tweets came back nil.") }
+            print("Inside of updateTimeLine in UserTimeLineViewController (attempts to get tweets from other user): \(tweets) ")
+            
+            OperationQueue.main.addOperation {
+                self.userTweets = tweets
+            }
+        }
+        
+    }
     
     
     override func viewDidLoad() {
@@ -32,7 +42,7 @@ class UserTimelineViewController: UIViewController, UITableViewDelegate, UITable
         
         //get user profile pic 
         
-        UIImage.fetchImageWith(userProfile.profilePißcURL) { (image) in
+        UIImage.fetchImageWith(userProfile.profilePicURL) { (image) in
             self.userTimeLineImage.image = image
         }
         
@@ -45,17 +55,32 @@ class UserTimelineViewController: UIViewController, UITableViewDelegate, UITable
         self.userTimeLineTableView.estimatedRowHeight = 50
         self.userTimeLineTableView.rowHeight = UITableViewAutomaticDimension
         
+        
+        //Register tweet nib for reuse; Tell the tableview to use the tweet nib for its cell
+        
         let tweetNib = UINib(nibName: "TweetNibCell", bundle: nil)
+        
+        //Gets tweets from twitter api
+        self.updateTimeLine()
         
         self.userTimeLineTableView.register(tweetNib, forCellReuseIdentifier: TweetNibCell.identifier)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return self.userTweets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        //Dequeues (removes from the queue)
+        let tweetCell = tableView.dequeueReusableCell(withIdentifier: TweetNibCell.identifier, for: indexPath) as! TweetNibCell
+        
+        let tweet = self.userTweets[indexPath.row]
+        
+        //Sends tweet information to our TweetNibCell class
+        tweetCell.tweet = tweet
+        
+        return tweetCell
+
     }
     
 }

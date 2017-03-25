@@ -137,8 +137,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tj0-PJ-CEO">
-                                            <rect key="frame" x="84" y="17" width="137" height="128"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tj0-PJ-CEO">
+                                            <rect key="frame" x="92" y="17" width="137" height="128"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="137" id="QaR-9n-4XJ"/>
                                             </constraints>
