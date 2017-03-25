@@ -22,6 +22,10 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     var profile: User?
+    
+    
+    //User information from TweetDetail
+    var userProfile : User!
 
     override func viewDidLoad() {
 
