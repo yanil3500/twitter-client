@@ -12,6 +12,8 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var timeLineImage: UIImageView!
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var tweetArr = [Tweet]() {
         didSet {
@@ -34,15 +36,25 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
         //TweetCellViewController
         self.tableView.estimatedRowHeight = 50
         self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+        //Register tweet nib for reuse; Tell the tableview to use the tweet nib for its cell
+        
+        let tweetNib = UINib(nibName: "TweetNibCell", bundle: nil)
+        
+        self.tableView.register(tweetNib, forCellReuseIdentifier: TweetNibCell.identifier)
+        
         //Gets tweets from twitter api
         self.updateTimeLine()
+        
+        //Set image on timeline
+        self.timeLineImage.image = #imageLiteral(resourceName: "Twitter_Logo_White_On_Image")
 
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
 
-        if segue.identifier == "showDetailSegue" {
+        if segue.identifier == TweetDetailViewController.identifier {
             //do some things
             print("Inside of prepare(for segue): Before getting selected tweet")
 
@@ -97,13 +109,23 @@ class HomeTimelineViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //Dequeues (removes from the queue)x
-        let tweetCell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as! TweetCellViewController
-
-        tweetCell.tweetText.text = tweetArr[indexPath.row].text
+        //Dequeues (removes from the queue)
+        let tweetCell = tableView.dequeueReusableCell(withIdentifier: TweetNibCell.identifier, for: indexPath) as! TweetNibCell
+        
+        let tweet = self.tweetArr[indexPath.row]
+        
+        //Sends tweet information to our TweetNibCell class
+        tweetCell.tweet = tweet
 
         return tweetCell
 
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.performSegue(withIdentifier: TweetDetailViewController.identifier, sender: nil)
+        
+        
     }
 
 }
