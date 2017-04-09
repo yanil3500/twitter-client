@@ -1,2 +1,2 @@
 # twitter-client
-A Twitter client written in iOS that uses the Twitter API.
+A Twitter client written in Swift that uses the Twitter API.
