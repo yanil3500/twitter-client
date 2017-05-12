@@ -39,10 +39,10 @@ class TweetDetailViewController: UIViewController, UITableViewDelegate, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         print("Inside of prepare segue function in TweetDetailViewController: \(segue.identifier)")
-        print("Inside of prepare segue function in TweetDetailViewController: \(UserTimelineViewController.identifier)")
-        if segue.identifier == UserTimelineViewController.identifier {
-            print("Inside of prepare (In UserTimelineViewController): \(UserTimelineViewController.identifier)")
-            guard let destinationController = segue.destination as? UserTimelineViewController else { fatalError("Could not load usertimeline") }
+        print("Inside of prepare segue function in TweetDetailViewController: \(HomeTimelineViewController.identifier)")
+        if segue.identifier == HomeTimelineViewController.identifier {
+            print("Inside of prepare (In UserTimelineViewController): \(HomeTimelineViewController.identifier)")
+            guard let destinationController = segue.destination as? HomeTimelineViewController else { fatalError("Could not load usertimeline") }
             destinationController.userProfile = self.tweet.user
         }
     }
